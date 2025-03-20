@@ -1,0 +1,13 @@
+.p1{
+    display: flex;
+    /* flex: auto; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.p2{
+    display: flex;
+    /* flex: auto; */
+    justify-content: right;
+    /* align-items: center; */
+}

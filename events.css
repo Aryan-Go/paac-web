@@ -1,0 +1,174 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background: linear-gradient(to bottom, #000011, #001133, #000a1a);
+    overflow-x: hidden;
+    transition: background 1s ease-in-out;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 50, 0.5) 0%, rgba(0, 0, 0, 1) 100%), url('https://paac.iitr.ac.in/path-to-stars.png') repeat;
+    opacity: 0.8;
+    z-index: -1;
+    animation: moveStars 100s linear infinite;
+}
+
+@keyframes moveStars {
+    0% { background-position: 0 0; }
+    100% { background-position: -3000px 3000px; }
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #66ccff;
+    text-shadow: 0 0 10px #66ccff;
+    transition: text-shadow 0.5s ease;
+}
+
+header h1:hover {
+    text-shadow: 0 0 20px #66ccff;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: #66ccff;
+    transform: scale(1.1);
+}
+
+/* Section */
+section {
+    text-align: center;
+    padding: 50px 20px;
+    transition: padding 0.5s ease;
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffdd44;
+    text-shadow: 0 0 10px #ffdd44;
+    transition: text-shadow 0.5s ease;
+}
+
+section h2:hover {
+    text-shadow: 0 0 20px #ffdd44;
+}
+
+/* Event List */
+.event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+.event.alt {
+    flex-direction: row-reverse;
+}
+
+.event-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.event-image {
+    flex: 1;
+    text-align: center;
+}
+
+.event-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.event-image img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.6);
+    transition: background 0.3s ease-in-out;
+}
+
+footer:hover {
+    background: rgba(0, 0, 0, 1);
+}
+
+footer p {
+    margin: 0 0 10px;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: #66ccff;
+    transform: scale(1.2);
+}

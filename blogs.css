@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background: linear-gradient(to bottom, #000011, #001133, #000a1a);
+    overflow-x: hidden;
+}
+
+/* Background Animation */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 50, 0.5) 0%, rgba(0, 0, 0, 1) 100%), url('https://paac.iitr.ac.in/path-to-stars.png') repeat;
+    opacity: 0.7;
+    z-index: -1;
+    animation: moveStars 100s linear infinite;
+}
+
+@keyframes moveStars {
+    0% { background-position: 0 0; }
+    100% { background-position: -3000px 3000px; }
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #66ccff;
+    text-shadow: 0 0 10px #66ccff;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: white;
+    background-color: #66ccff;
+    transform: scale(1.1);
+    text-shadow: 0 0 10px #66ccff;
+}
+
+/* Section Styles */
+section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+section h2 {
+    font-size: 2.5em;
+    color: #ffdd44;
+    text-shadow: 0 0 10px #ffdd44;
+}
+
+/* Blog Section */
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.blog-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.blog-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+.blog-item a {
+    color: #66ccff;
+    text-decoration: none;
+    font-size: 1.4em;
+    transition: color 0.3s ease;
+}
+
+.blog-item a:hover {
+    color: #ffdd44;
+    text-shadow: 0 0 10px #ffdd44;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.6);
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: #66ccff;
+    transform: scale(1.2);
+}
